@@ -1,0 +1,365 @@
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin: 0 0 26px;
+}
+.stat {
+  padding: 17px 22px;
+}
+.stat + .stat {
+  border-inline-start: 1px solid var(--border);
+}
+.stat dt {
+  font-size: 12px;
+  color: var(--muted);
+}
+.stat dd {
+  margin: 6px 0 0;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.reservations-panel {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 18px 20px 12px;
+}
+.panel-heading h2 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+.count-label {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 400;
+  margin-inline-start: 4px;
+}
+.status-tabs {
+  display: flex;
+  gap: 24px;
+  border-bottom: 1px solid var(--border);
+  padding: 0 20px;
+  overflow-x: auto;
+}
+.status-tabs button {
+  padding: 11px 2px;
+  border-bottom: 2px solid transparent;
+  background: none;
+  color: var(--muted);
+  white-space: nowrap;
+  font-size: 12px;
+}
+.status-tabs button.selected {
+  border-bottom-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+.filters {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #cfd2d5;
+  border-radius: var(--radius);
+  padding-inline: 10px;
+  height: 37px;
+  color: var(--muted);
+  width: 300px;
+  max-width: 100%;
+}
+.search-field:focus-within {
+  outline: 2px solid #52749a;
+  outline-offset: 1px;
+}
+.search-field input {
+  width: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  height: 100%;
+  background: transparent;
+  font-size: 12px;
+  color: #24272b;
+}
+.search-field input::placeholder {
+  color: #72777e;
+}
+.search-field button {
+  display: flex;
+  background: none;
+  color: #61666c;
+  padding: 0;
+}
+.filter-selects {
+  display: flex;
+  gap: 16px;
+}
+.filter-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 11px;
+  white-space: nowrap;
+}
+.filter-control select,
+.page-controls select {
+  background: #fff;
+  border: 1px solid #cfd2d5;
+  border-radius: var(--radius);
+  color: #353a41;
+  padding: 5px 7px;
+  min-height: 36px;
+  font-size: 11px;
+}
+.table-scroll {
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: start;
+  white-space: nowrap;
+  font-size: 12px;
+}
+th,
+td {
+  text-align: start;
+  padding: 12px 18px;
+  border-bottom: 1px solid #e8e9e9;
+}
+th {
+  background: #f6f7f7;
+  border-top: 1px solid var(--border);
+  color: #575e65;
+  font-weight: 500;
+  font-size: 11px;
+}
+th:first-child,
+td:first-child {
+  padding-inline-start: 20px;
+}
+tbody tr:hover {
+  background: #fafafa;
+}
+tbody tr:last-child td {
+  border-bottom: none;
+}
+td {
+  height: 56px;
+}
+.customer-name {
+  background: none;
+  font: inherit;
+  padding: 0;
+  color: #262b31;
+  text-align: start;
+}
+.customer-name:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.phone {
+  font-variant-numeric: tabular-nums;
+  color: #4f555d;
+}
+.today-label {
+  margin-inline-start: 8px;
+  font-size: 9px;
+  color: #61666c;
+}
+.table-sort {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font: inherit;
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+.badge {
+  display: inline-block;
+  font-size: 10px;
+  line-height: 1.7;
+  padding: 3px 7px;
+  border-radius: 2px;
+  background: #f0f1f1;
+  color: #464d55;
+}
+.badge.confirmed {
+  color: #326044;
+  background: #edf4ef;
+}
+.badge.pending {
+  color: #7c5b1d;
+  background: #f7f2e7;
+}
+.badge.cancelled {
+  color: #94413b;
+  background: #f8eded;
+}
+.badge > span {
+  display: none;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 20px;
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--muted);
+}
+.page-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.page-controls label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-inline-end: 15px;
+  font-size: 10px;
+}
+.page-controls select {
+  min-height: 29px;
+  padding: 2px 5px;
+}
+.page-controls > span {
+  padding: 0 4px;
+  font-variant-numeric: tabular-nums;
+}
+.empty {
+  padding: 56px 20px;
+  text-align: center;
+}
+.empty p {
+  color: var(--muted);
+  margin: 0 0 20px;
+  font-size: 13px;
+}
+.empty > div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.loading-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  color: var(--muted);
+  font-size: 13px;
+}
+@media (max-width: 1100px) {
+  .filters {
+    flex-wrap: wrap;
+  }
+  .search-field {
+    flex: 1 1 250px;
+  }
+  .filter-selects {
+    gap: 10px;
+  }
+  th,
+  td {
+    padding-inline: 14px;
+  }
+}
+@media (max-width: 760px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-bottom: 21px;
+  }
+  .stat {
+    padding: 13px 16px;
+  }
+  .stat dd {
+    font-size: 25px;
+  }
+  .stat:nth-child(3) {
+    border-inline-start: none;
+  }
+  .stat:nth-child(n + 3) {
+    border-top: 1px solid var(--border);
+  }
+  .stat dt {
+    font-size: 11px;
+  }
+  .panel-heading {
+    padding: 15px 14px 10px;
+  }
+  .panel-heading h2 {
+    font-size: 13px;
+  }
+  .status-tabs {
+    gap: 19px;
+    padding-inline: 14px;
+  }
+  .status-tabs button {
+    font-size: 11px;
+  }
+  .filters {
+    padding: 13px 14px;
+    gap: 11px;
+  }
+  .search-field {
+    width: 100%;
+    flex-basis: 100%;
+  }
+  .filter-selects {
+    width: 100%;
+    gap: 14px;
+    justify-content: flex-end;
+  }
+  .filter-control {
+    gap: 5px;
+    flex: 1;
+  }
+  .filter-control select {
+    min-width: 0;
+    width: 100%;
+    font-size: 10px;
+  }
+  .pagination {
+    padding: 12px 14px;
+    font-size: 10px;
+    flex-wrap: wrap;
+  }
+  .page-controls label {
+    display: none;
+  }
+  .page-controls {
+    margin-inline-start: auto;
+    gap: 3px;
+  }
+  th,
+  td {
+    padding: 11px 14px;
+  }
+  .small-button {
+    font-size: 10px;
+  }
+}
